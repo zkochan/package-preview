@@ -1,0 +1,41 @@
+{
+  "name": "package-preview",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "prepublishOnly": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Zoltan Kochan <z@kochan.io> (https://www.kochan.io/)",
+  "license": "MIT",
+  "engines": {
+    "node": ">=4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zkochan/package-preview.git"
+  },
+  "homepage": "https://github.com/zkochan/package-preview#readme",
+  "bugs": {
+    "url": "https://github.com/pnpm/pnpm/issues"
+  },
+  "dependencies": {
+    "@types/mz": "^0.0.32",
+    "@types/node": "^8.0.46",
+    "@types/write-json-file": "^2.2.1",
+    "cross-spawn": "^5.1.0",
+    "graceful-fs": "^4.1.11",
+    "mz": "^2.7.0",
+    "symlink-dir": "^1.1.0",
+    "unpack-stream": "^2.1.1",
+    "write-json-file": "^2.3.0"
+  },
+  "devDependencies": {
+    "typescript": "^2.5.3"
+  }
+}
