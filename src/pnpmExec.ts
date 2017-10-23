@@ -1,9 +1,14 @@
 import spawn = require('cross-spawn')
 
-export default async function (prefix: string) {
+export default async function (
+  opts: {
+    args: string[],
+    prefix: string,
+  }
+) {
   return new Promise((resolve, reject) => {
-    const proc = spawn('pnpm', ['install', '--production'], {
-      cwd: prefix,
+    const proc = spawn('pnpm', opts.args, {
+      cwd: opts.prefix,
       stdio: 'inherit',
     })
 
