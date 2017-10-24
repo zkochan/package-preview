@@ -22,6 +22,14 @@ export default async function (what: string, where: string) {
   // there has to be a better way, for instance, runnin `pnpm install --production`
   // However, currently `pnpm link` would install all deps, so this hack is needed
   delete pkg.devDependencies
+
+  // Would be better to install the package dirrectly from the tarball
+  // in that case this hack would not be needed
+  if (pkg.scripts) {
+    delete pkg.scripts.prepare
+    delete pkg.scripts.prepublish
+  }
+
   await writeJsonFile(path.join(distDir, 'package.json'), pkg)
 
   await writeJsonFile(path.join(previewDir, 'package.json'), wrapperPkg)
