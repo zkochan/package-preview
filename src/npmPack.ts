@@ -16,7 +16,12 @@ export default function npmPack(dependencyPath: string): Promise<string> {
 
     proc.on('close', (code: number) => {
       if (code > 0) return reject(new Error('Exit code ' + code))
-      const tgzFilename = stdout.trim()
+
+      // The last line contains the generated tgz filename
+      stdout = stdout.trim()
+      const parts = stdout.split('\n')
+      const tgzFilename = parts[parts.length - 1]
+
       return resolve(tgzFilename)
     })
   })
