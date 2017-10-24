@@ -1,8 +1,10 @@
 dependencies:
+  '@types/fs-extra': 4.0.2
   '@types/mz': 0.0.32
   '@types/node': 8.0.46
   '@types/write-json-file': 2.2.1
   cross-spawn: 5.1.0
+  fs-extra: 4.0.2
   graceful-fs: 4.1.11
   mz: 2.7.0
   rimraf-then: 1.0.1
@@ -12,6 +14,11 @@ dependencies:
 devDependencies:
   typescript: 2.5.3
 packages:
+  /@types/fs-extra/4.0.2:
+    dependencies:
+      '@types/node': 8.0.46
+    resolution:
+      integrity: sha512-Id1hnmfd+7G9K+jWz2syfMcpymx2mj6B1y4C72vAoYQzxOA79UhY/kNvOCyb9yYR1SoSaHyhwcYtWKKqUiLTZA==
   /@types/mz/0.0.31:
     dependencies:
       '@types/node': 8.0.46
@@ -112,6 +119,13 @@ packages:
       once: 1.4.0
     resolution:
       integrity: sha1-epDYM+/abPpurA9JSduw+tOmMgY=
+  /fs-extra/4.0.2:
+    dependencies:
+      graceful-fs: 4.1.11
+      jsonfile: 4.0.0
+      universalify: 0.1.1
+    resolution:
+      integrity: sha1-+RcExT0bRh+JNFKwwwfZmXZHq2s=
   /fs.realpath/1.0.0:
     resolution:
       integrity: sha1-FQStJSMVjKpA20onh8sBQRmU6k8=
@@ -186,6 +200,11 @@ packages:
   /isexe/2.0.0:
     resolution:
       integrity: sha1-6PvzdNxVb/iUehDcsFctYz8s+hA=
+  /jsonfile/4.0.0:
+    optionalDependencies:
+      graceful-fs: 4.1.11
+    resolution:
+      integrity: sha1-h3Gq4HmbZAdrdmQPygWPnBDjPss=
   /lru-cache/4.1.1:
     dependencies:
       pseudomap: 1.0.2
@@ -397,6 +416,9 @@ packages:
       through: 2.3.8
     resolution:
       integrity: sha512-izD3jxT8xkzwtXRUZjtmRwKnZoeECrfZ8ra/ketwOcusbZEp4mjULMnJOCfTDZBgGQAAY1AJ/IgxcwkavcX9Og==
+  /universalify/0.1.1:
+    resolution:
+      integrity: sha1-+nG63UQ3r0wUiEHjs7Fl+enlkLc=
   /unpack-stream/2.1.1:
     dependencies:
       '@types/node': 8.0.46
@@ -448,10 +470,12 @@ packages:
 registry: 'https://registry.npmjs.org/'
 shrinkwrapVersion: 3
 specifiers:
+  '@types/fs-extra': ^4.0.2
   '@types/mz': ^0.0.32
   '@types/node': ^8.0.46
   '@types/write-json-file': ^2.2.1
   cross-spawn: ^5.1.0
+  fs-extra: ^4.0.2
   graceful-fs: ^4.1.11
   mz: ^2.7.0
   rimraf-then: ^1.0.1
