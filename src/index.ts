@@ -17,6 +17,13 @@ export default async function (what: string, where: string) {
   const wrapperPkg = {
     dependencies: pkg.peerDependencies || {},
   }
+
+  // We don't want to install dev dependencies
+  // there has to be a better way, for instance, runnin `pnpm install --production`
+  // However, currently `pnpm link` would install all deps, so this hack is needed
+  delete pkg.devDependencies
+  await writeJsonFile(path.join(distDir, 'package.json'), pkg)
+
   await writeJsonFile(path.join(previewDir, 'package.json'), wrapperPkg)
 
   await pnpmExec({
@@ -26,7 +33,7 @@ export default async function (what: string, where: string) {
 
   await pnpmExec({
     prefix: distDir,
-    args: ['link'] // TODO! , '--production'
+    args: ['link']
   })
 
   await pnpmExec({
