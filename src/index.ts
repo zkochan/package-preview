@@ -11,7 +11,6 @@ export default async function (what: string, where: string) {
   const previewDir = path.join(pkgDir, '..', `${path.basename(pkgDir)}.preview`)
   const distDir = path.join(previewDir, 'package')
 
-  // TODO: remove everything except node_modules and shrinkwrap.yaml from dest dir
   await publishToDir(pkgDir, distDir)
 
   const pkg = require(path.join(distDir, 'package.json'))
@@ -27,7 +26,7 @@ export default async function (what: string, where: string) {
 
   await pnpmExec({
     prefix: distDir,
-    args: ['link']
+    args: ['link'] // TODO! , '--production'
   })
 
   await pnpmExec({
