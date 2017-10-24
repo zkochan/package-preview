@@ -6,14 +6,12 @@ import unpackStream = require('unpack-stream')
 import rimraf = require('rimraf-then')
 
 export default async function (pkgDir: string, distDir: string) {
-  await clearDistDir(distDir)
-
   try {
+    await clearDistDir(distDir)
     await fx.copy(path.join(pkgDir, 'shrinkwrap.yaml'), path.join(distDir, 'shrinkwrap.yaml'))
   } catch (err) {
     if (err.code !== 'ENOENT') throw err
   }
-
 
   const tgzFilename = await npmPack(pkgDir)
   const tarball = path.resolve(pkgDir, tgzFilename)
