@@ -26,35 +26,31 @@ as a dependency, so you can test the exact same package content that is going to
 ## Install
 
 ```
-npm install package-preview
+npm install -D package-preview
 ```
 
 ## Usage
 
-In the `package.json`, add a `pretest` script:
+Lets' say your package is called `awesome`. In its `package.json`, run `preview` before running your tests:
 
 ```json
 {
-  ...
+  "name": "awesome",
+  "version": "1.0.0",
   "scripts": {
-    ...
-    "pretest": "package-preview",
-    ...
-  },
-  ...
+    "test": "preview && tape test.js"
+  }
 }
 ```
 
-`package-preview` is going to create the preview version of your package and link it into `node_modules/package-preview`.
-So in your tests, you can now require `package-preview` and test the production version of your package.
-
-Example:
+`package-preview` is going to create the preview version of your package and link it into your project's `node_modules`.
+So in your tests, you can require `awesome` and test the production version of your package:
 
 ```js
 // Instead of require('.')
-const sum = require('sum')
+const awesome = require('awesome')
 
-assert(sum(1 + 2) === 3)
+assert(awesome() === 'Awesome stuff!')
 ```
 
 ## License
