@@ -13,7 +13,7 @@
   ],
   "scripts": {
     "prepublishOnly": "tsc",
-    "test": "tsc && node example"
+    "test": "tsc && node lib/cli && ts-node test"
   },
   "keywords": [],
   "author": "Zoltan Kochan <z@kochan.io> (https://www.kochan.io/)",
@@ -44,6 +44,11 @@
     "write-json-file": "^2.3.0"
   },
   "devDependencies": {
+    "@types/tape": "^4.2.31",
+    "@types/tempy": "^0.1.0",
+    "tape": "^4.8.0",
+    "tempy": "^0.2.1",
+    "ts-node": "^3.3.0",
     "typescript": "^2.5.3"
   }
 }

@@ -1,0 +1,10 @@
+{
+  "name": "simple",
+  "version": "1.0.0",
+  "dependencies": {
+    "is-positive": "^1.0.0"
+  },
+  "devDependencies": {
+    "is-negative": "^1.0.0"
+  }
+}
