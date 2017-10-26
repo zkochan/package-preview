@@ -25,8 +25,20 @@ as a dependency, so you can test the exact same package content that is going to
 
 ## Install
 
+`package-preview` uses [pnpm](https://github.com/pnpm/pnpm) for installing dependencies for the preview. So install `pnpm`:
+
+```bash
+npm install -g pnpm
+# or
+curl -L https://unpkg.com/@pnpm/self-installer | node
 ```
+
+Install `package-preview`:
+
+```bash
 npm install -D package-preview
+# or
+pnpm install -D package-preview
 ```
 
 ## Usage
