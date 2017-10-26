@@ -16,7 +16,16 @@
     "lint": "tslint -c tslint.json --project .",
     "test": "npm run lint && tsc && node lib/cli && ts-node test"
   },
-  "keywords": [],
+  "keywords": [
+    "preview",
+    "prevue",
+    "teaser",
+    "sneak peek",
+    "test",
+    "prod",
+    "publish",
+    "pseudo publish"
+  ],
   "author": "Zoltan Kochan <z@kochan.io> (https://www.kochan.io/)",
   "license": "MIT",
   "engines": {
