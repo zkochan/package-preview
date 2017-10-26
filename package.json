@@ -37,7 +37,7 @@
   },
   "homepage": "https://github.com/zkochan/package-preview#readme",
   "bugs": {
-    "url": "https://github.com/pnpm/pnpm/issues"
+    "url": "https://github.com/zkochan/package-preview/issues"
   },
   "dependencies": {
     "@types/fs-extra": "^4.0.2",
