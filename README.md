@@ -32,7 +32,7 @@ You can read more about pnpm's strictness and how it helps to avoid silly bugs i
 
 ## Install
 
-`package-preview` uses [pnpm](https://github.com/pnpm/pnpm) for installing dependencies for the preview. So install `pnpm`:
+`package-preview` uses [pnpm](https://github.com/pnpm/pnpm) for installing dependencies for the preview. Install `pnpm`:
 
 ```bash
 npm install -g pnpm
