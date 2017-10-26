@@ -3,12 +3,13 @@ import writeJsonFile = require('write-json-file')
 import publishToDir from './publishToDir'
 import pnpmExec from './pnpmExec'
 import symlinkDir from 'symlink-dir'
+import getPreviewDir from './getPreviewDir'
 
 export default async function (what: string, where: string) {
   const pkgDir = path.resolve(what)
   where = path.resolve(where)
 
-  const previewDir = path.join(pkgDir, '..', `${path.basename(pkgDir)}.preview`)
+  const previewDir = await getPreviewDir(where, path.basename(pkgDir))
   const distDir = path.join(previewDir, 'package')
 
   await publishToDir(pkgDir, distDir)

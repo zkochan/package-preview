@@ -4,6 +4,7 @@ dependencies:
   '@types/node': 8.0.46
   '@types/write-json-file': 2.2.1
   cross-spawn: 5.1.0
+  find-down: 0.1.4
   fs-extra: 4.0.2
   graceful-fs: 4.1.11
   mz: 2.7.0
@@ -229,6 +230,14 @@ packages:
       node: '>=0.8.0'
     resolution:
       integrity: sha1-G2HAViGQqN/2rjuyzwIAyhMLhtQ=
+  /find-down/0.1.4:
+    dependencies:
+      locate-path: 2.0.0
+      next-path: 1.0.0
+    engines:
+      node: '>=4'
+    resolution:
+      integrity: sha512-3lcasU5kFaqBp/IJ19lDRv5I0FG42J94s2oIP5r0KA5z5+ID0vocMylMUEuuGbXqJ5WLNZteQB9CAVIzUnk9bQ==
   /for-each/0.3.2:
     dependencies:
       is-function: 1.0.1
@@ -381,6 +390,14 @@ packages:
       graceful-fs: 4.1.11
     resolution:
       integrity: sha1-h3Gq4HmbZAdrdmQPygWPnBDjPss=
+  /locate-path/2.0.0:
+    dependencies:
+      p-locate: 2.0.0
+      path-exists: 3.0.0
+    engines:
+      node: '>=4'
+    resolution:
+      integrity: sha1-K1aLJl7slExtnA3pw9u7ygNUzY4=
   /lru-cache/4.1.1:
     dependencies:
       pseudomap: 1.0.2
@@ -429,6 +446,11 @@ packages:
       thenify-all: 1.6.0
     resolution:
       integrity: sha512-z81GNO7nnYMEhrGh9LeymoE4+Yr0Wn5McHIZMK5cfQCl+NDX08sCZgUc9/6MHni9IWuFLm1Z3HTCXu2z9fN62Q==
+  /next-path/1.0.0:
+    engines:
+      node: '>=6'
+    resolution:
+      integrity: sha1-gixFgNer54PfGZZbeJYiyoAWA+Q=
   /object-assign/4.1.1:
     engines:
       node: '>=0.10.0'
@@ -449,6 +471,18 @@ packages:
       wrappy: 1.0.2
     resolution:
       integrity: sha1-WDsap3WWHUsROsF9nFC6753Xa9E=
+  /p-limit/1.1.0:
+    engines:
+      node: '>=4'
+    resolution:
+      integrity: sha1-sH/y2aXYi+yAYDWJWiurZqJ5iLw=
+  /p-locate/2.0.0:
+    dependencies:
+      p-limit: 1.1.0
+    engines:
+      node: '>=4'
+    resolution:
+      integrity: sha1-IKAQOyIqcMj9OcwuWAaA893l7EM=
   /pako/0.2.9:
     resolution:
       integrity: sha1-8/dSL073gjSNqBYbrZ7P1Rv4OnU=
@@ -458,6 +492,11 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha1-bVuTSkVpk7I9N/QKOC1vFmao5cY=
+  /path-exists/3.0.0:
+    engines:
+      node: '>=4'
+    resolution:
+      integrity: sha1-zg6+ql94yxiSXqfYENe1mwEP1RU=
   /path-is-absolute/1.0.1:
     engines:
       node: '>=0.10.0'
@@ -814,6 +853,7 @@ specifiers:
   '@types/tempy': ^0.1.0
   '@types/write-json-file': ^2.2.1
   cross-spawn: ^5.1.0
+  find-down: ^0.1.4
   fs-extra: ^4.0.2
   graceful-fs: ^4.1.11
   mz: ^2.7.0
