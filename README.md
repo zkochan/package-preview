@@ -27,8 +27,8 @@ as a dependency, so you can test the exact same package content that is going to
 However, some issues can be missed even when a package is published. From version 3, npm creates a flat `node_modules` structure,
 as a result, your project has access to packages that are not declared in its `package.json`. Luckily, there is an alternative
 package manager which is more strict - [pnpm](https://github.com/pnpm/pnpm). `pnpm` creates a strict, nested `node_modules` structure
-and `package-preview` uses it for installing depenencies for the preview.
-You can read more about pnpm's strictenss and how it helps to avoid silly bugs in [this](https://www.kochan.io/nodejs/pnpms-strictness-helps-to-avoid-silly-bugs.html) article.
+and `package-preview` uses it for installing dependencies for the preview.
+You can read more about pnpm's strictness and how it helps to avoid silly bugs in [this](https://www.kochan.io/nodejs/pnpms-strictness-helps-to-avoid-silly-bugs.html) article.
 
 ## Install
 
