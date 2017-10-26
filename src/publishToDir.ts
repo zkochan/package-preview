@@ -1,9 +1,9 @@
-import fs = require('mz/fs')
 import fx = require('fs-extra')
+import fs = require('mz/fs')
 import path = require('path')
-import npmPack from './npmPack'
-import unpackStream = require('unpack-stream')
 import rimraf = require('rimraf-then')
+import unpackStream = require('unpack-stream')
+import npmPack from './npmPack'
 
 export default async function (pkgDir: string, distDir: string) {
   try {
@@ -21,7 +21,7 @@ export default async function (pkgDir: string, distDir: string) {
 
 async function fetchFromLocalTarball (tarball: string, dist: string) {
   await unpackStream.local(fs.createReadStream(tarball), dist, {
-    generateIntegrity: false
+    generateIntegrity: false,
   })
 }
 
@@ -29,12 +29,12 @@ const filesToKeep = new Set(['node_modules', 'shrinkwrap.yaml'])
 
 function clearDistDir (base: string) {
   return fs.readdir(base)
-  .then(dirs => {
+  .then((dirs) => {
     return Promise.all(
       dirs
-        .filter(dir => !filesToKeep.has(dir))
-        .map(dir => path.join(base, dir))
-        .map(rimraf)
+        .filter((dir) => !filesToKeep.has(dir))
+        .map((dir) => path.join(base, dir))
+        .map(rimraf),
     )
   })
 }

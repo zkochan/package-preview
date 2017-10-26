@@ -4,7 +4,7 @@ export default async function (
   opts: {
     args: string[],
     prefix: string,
-  }
+  },
 ) {
   return new Promise((resolve, reject) => {
     const proc = spawn('pnpm', opts.args, {

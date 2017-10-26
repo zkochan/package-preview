@@ -13,7 +13,8 @@
   ],
   "scripts": {
     "prepublishOnly": "tsc",
-    "test": "tsc && node lib/cli && ts-node test"
+    "lint": "tslint -c tslint.json --project .",
+    "test": "npm run lint && tsc && node lib/cli && ts-node test"
   },
   "keywords": [],
   "author": "Zoltan Kochan <z@kochan.io> (https://www.kochan.io/)",
@@ -50,6 +51,7 @@
     "tape": "^4.8.0",
     "tempy": "^0.2.1",
     "ts-node": "^3.3.0",
+    "tslint": "^5.8.0",
     "typescript": "^2.5.3"
   }
 }

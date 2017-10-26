@@ -1,5 +1,5 @@
-import path = require('path')
 import findDown = require('find-down')
+import path = require('path')
 
 export default async function (target: string, pkgName: string) {
   // The preview directory should be placed in a directory that doesn't have

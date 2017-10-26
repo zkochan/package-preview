@@ -1,14 +1,14 @@
 import spawn = require('cross-spawn')
 
-export default function npmPack(dependencyPath: string): Promise<string> {
+export default function npmPack (dependencyPath: string): Promise<string> {
   return new Promise((resolve, reject) => {
     const proc = spawn('npm', ['pack'], {
-      cwd: dependencyPath
+      cwd: dependencyPath,
     })
 
     let stdout = ''
 
-    proc.stdout.on('data', (data: Object) => {
+    proc.stdout.on('data', (data: object) => {
       stdout += data.toString()
     })
 

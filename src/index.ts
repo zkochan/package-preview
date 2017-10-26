@@ -1,13 +1,13 @@
 import path = require('path')
-import writeJsonFile = require('write-json-file')
-import publishToDir from './publishToDir'
-import pnpmExec from './pnpmExec'
 import symlinkDir from 'symlink-dir'
+import writeJsonFile = require('write-json-file')
 import getPreviewDir from './getPreviewDir'
+import pnpmExec from './pnpmExec'
+import publishToDir from './publishToDir'
 
 export default async function (what: string, where: string) {
   const pkgDir = path.resolve(what)
-  where = path.resolve(where)
+where = path.resolve(where)
 
   const previewDir = await getPreviewDir(where, path.basename(pkgDir))
   const distDir = path.join(previewDir, 'package')
@@ -36,13 +36,13 @@ export default async function (what: string, where: string) {
   await writeJsonFile(path.join(previewDir, 'package.json'), wrapperPkg)
 
   await pnpmExec({
-    prefix: previewDir,
     args: ['install'],
+    prefix: previewDir,
   })
 
   await pnpmExec({
+    args: ['link'],
     prefix: distDir,
-    args: ['link']
   })
 
   await pnpmExec({
