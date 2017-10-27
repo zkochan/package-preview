@@ -19,11 +19,6 @@ where = path.resolve(where)
     dependencies: pkg.peerDependencies || {},
   }
 
-  // We don't want to install dev dependencies
-  // there has to be a better way, for instance, runnin `pnpm install --production`
-  // However, currently `pnpm link` would install all deps, so this hack is needed
-  delete pkg.devDependencies
-
   // Would be better to install the package dirrectly from the tarball
   // in that case this hack would not be needed
   if (pkg.scripts) {
@@ -36,12 +31,12 @@ where = path.resolve(where)
   await writeJsonFile(path.join(previewDir, 'package.json'), wrapperPkg)
 
   await pnpmExec({
-    args: ['install'],
+    args: ['install', '--production'],
     prefix: previewDir,
   })
 
   await pnpmExec({
-    args: ['link'],
+    args: ['link', '--production'],
     prefix: distDir,
   })
 
