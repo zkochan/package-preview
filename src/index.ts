@@ -1,8 +1,8 @@
+import pnpmExec from '@pnpm/exec'
 import path = require('path')
 import symlinkDir from 'symlink-dir'
 import writeJsonFile = require('write-json-file')
 import getPreviewDir from './getPreviewDir'
-import pnpmExec from './pnpmExec'
 import publishToDir from './publishToDir'
 
 export default async function (what: string, where: string) {
@@ -31,14 +31,12 @@ export default async function (what: string, where: string) {
   await writeJsonFile(path.join(previewDir, 'package.json'), wrapperPkg)
 
   // This is where the peer dependencies are installed
-  await pnpmExec({
-    args: ['install', '--production'],
-    prefix: previewDir,
+  await pnpmExec(['install', '--production'], {
+    cwd: previewDir,
   })
 
   // Dependencies in the preview folder are installed during linking
-  await pnpmExec({
-    args: ['link', '--production', path.relative(where, distDir)],
-    prefix: where,
+  await pnpmExec(['link', '--production', path.relative(where, distDir)], {
+    cwd: where,
   })
 }
