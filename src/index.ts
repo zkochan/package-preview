@@ -7,7 +7,7 @@ import publishToDir from './publishToDir'
 
 export default async function (what: string, where: string) {
   const pkgDir = path.resolve(what)
-where = path.resolve(where)
+  where = path.resolve(where)
 
   const previewDir = await getPreviewDir(where, path.basename(pkgDir))
   const distDir = path.join(previewDir, 'package')
@@ -30,18 +30,15 @@ where = path.resolve(where)
 
   await writeJsonFile(path.join(previewDir, 'package.json'), wrapperPkg)
 
+  // This is where the peer dependencies are installed
   await pnpmExec({
     args: ['install', '--production'],
     prefix: previewDir,
   })
 
+  // Dependencies in the preview folder are installed during linking
   await pnpmExec({
-    args: ['link', '--production'],
-    prefix: distDir,
-  })
-
-  await pnpmExec({
-    args: ['link', pkg.name],
+    args: ['link', '--production', path.relative(where, distDir)],
     prefix: where,
   })
 }
