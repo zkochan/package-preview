@@ -1,5 +1,5 @@
 dependencies:
-  '@pnpm/exec': 1.0.1
+  '@pnpm/exec': 1.0.2
   '@types/fs-extra': 4.0.2
   '@types/mz': 0.0.32
   '@types/node': 8.0.46
@@ -22,20 +22,18 @@ devDependencies:
   tslint: 5.8.0
   typescript: 2.5.3
 packages:
-  /@pnpm/exec/1.0.1:
+  /@pnpm/exec/1.0.2:
     dependencies:
       '@types/got': 7.1.4
       '@types/node': 8.0.47
-      '@types/tempy': 0.1.0
       command-exists: 1.2.2
       cross-spawn: 5.1.0
       got: 7.1.0
-      tempy: 0.2.1
     dev: false
     engines:
       node: '>=4'
     resolution:
-      integrity: sha512-//7u0vAQHW/aDvAC1YYJwYIwJRiW66/qWgwDWFLTL1gdGNgQJrxI03zQCB9xCdZaP+L8iOnjeQ9lyX5HN9Y0og==
+      integrity: sha512-BjVjPYfTXNBF75WFyOJRPNw6BLutvgx6lvShzGGTreEAde/sND0DAAeyr+t3Wc9YuFKZ7DG84b97H5of8JiMmw==
   /@types/fs-extra/4.0.2:
     dependencies:
       '@types/node': 8.0.46
@@ -74,6 +72,7 @@ packages:
     resolution:
       integrity: sha512-DEPn8FJKQR6eeMHZ407TuAqlhBKQa54PTM3c7Z6pKOI1uHaPnidmpmOXYtNZTcDrL5hnZofSHPwX1AQ9HbaMUg==
   /@types/tempy/0.1.0:
+    dev: true
     resolution:
       integrity: sha512-2qeSxI2bMucW58Jsj8jrBXZxobtcKkvO44AvJzKGaD8+m/3KRuBqeKitJ5U6sqy3a9tFsqhzsxMkqR4Wcl6AmQ==
   /@types/write-json-file/2.2.1:
@@ -229,6 +228,7 @@ packages:
     resolution:
       integrity: sha1-6L0O/uWPz/b4+UUQoKVUu/ojVEk=
   /crypto-random-string/1.0.0:
+    dev: true
     engines:
       node: '>=4'
     resolution:
@@ -981,6 +981,7 @@ packages:
     resolution:
       integrity: sha1-NlSc8E7RrumyowwBQyUiONr5QBY=
   /temp-dir/1.0.0:
+    dev: true
     engines:
       node: '>=4'
     resolution:
@@ -989,6 +990,7 @@ packages:
     dependencies:
       temp-dir: 1.0.0
       unique-string: 1.0.0
+    dev: true
     engines:
       node: '>=4'
     resolution:
@@ -1095,6 +1097,7 @@ packages:
   /unique-string/1.0.0:
     dependencies:
       crypto-random-string: 1.0.0
+    dev: true
     engines:
       node: '>=4'
     resolution:
@@ -1190,7 +1193,7 @@ registry: 'https://registry.npmjs.org/'
 shrinkwrapMinorVersion: 2
 shrinkwrapVersion: 3
 specifiers:
-  '@pnpm/exec': ^1.0.1
+  '@pnpm/exec': ^1.0.2
   '@types/fs-extra': ^4.0.2
   '@types/mz': ^0.0.32
   '@types/node': ^8.0.46
