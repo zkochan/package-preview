@@ -12,9 +12,10 @@
     "lib"
   ],
   "scripts": {
-    "prepublishOnly": "tsc",
+    "prepublishOnly": "npm run tsc",
+    "tsc": "rimraf lib && tsc",
     "lint": "tslint -c tslint.json --project .",
-    "test": "npm run lint && tsc && node lib/cli && ts-node test"
+    "test": "npm run lint && npm run tsc && node lib/cli && ts-node test"
   },
   "keywords": [
     "preview",
@@ -58,6 +59,7 @@
   "devDependencies": {
     "@types/tape": "^4.2.31",
     "@types/tempy": "^0.1.0",
+    "rimraf": "^2.6.2",
     "tape": "^4.8.0",
     "tempy": "^0.2.1",
     "ts-node": "^3.3.0",

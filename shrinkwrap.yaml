@@ -16,6 +16,7 @@ dependencies:
 devDependencies:
   '@types/tape': 4.2.31
   '@types/tempy': 0.1.0
+  rimraf: 2.6.2
   tape: 4.8.0
   tempy: 0.2.1
   ts-node: 3.3.0
@@ -820,7 +821,6 @@ packages:
   /rimraf/2.6.2:
     dependencies:
       glob: 7.1.2
-    dev: false
     resolution:
       integrity: sha512-lreewLK/BlghmxtfH36YYVg1i8IAce4TI7oao75I1g245+6BctqTVQiBP3YUJ9C6DQOXJmkYR9X9fCLtCOJc5w==
   /safe-buffer/5.1.1:
@@ -1205,6 +1205,7 @@ specifiers:
   fs-extra: ^4.0.2
   graceful-fs: ^4.1.11
   mz: ^2.7.0
+  rimraf: ^2.6.2
   rimraf-then: ^1.0.1
   symlink-dir: ^1.1.0
   tape: ^4.8.0
