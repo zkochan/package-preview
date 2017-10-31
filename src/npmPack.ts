@@ -7,15 +7,23 @@ export default function npmPack (dependencyPath: string): Promise<string> {
     })
 
     let stdout = ''
+    let stderr = ''
 
     proc.stdout.on('data', (data: object) => {
       stdout += data.toString()
+    })
+    proc.stderr.on('data', (data: object) => {
+      stderr += data.toString()
     })
 
     proc.on('error', reject)
 
     proc.on('close', (code: number) => {
-      if (code > 0) return reject(new Error('Exit code ' + code))
+      if (code > 0) {
+        console.log(stdout)
+        console.log(stderr)
+        return reject(new Error('Exit code ' + code))
+      }
 
       // The last line contains the generated tgz filename
       stdout = stdout.trim()

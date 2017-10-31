@@ -16,6 +16,7 @@
     "no-use-before-declare": true,
     "no-var-requires": true,
     "no-require-imports": false,
+    "no-console": false,
     "space-before-function-paren": [true, "always"],
     "one-line": [true,
       "check-else",
