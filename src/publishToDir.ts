@@ -54,7 +54,7 @@ async function runPrepublishScripts (pkgDir: string) {
   if (!pkg.scripts) return
   const scripts = pkg.scripts
 
-  for (const script in PREPUBLISH_SCRIPTS) {
+  for (const script of PREPUBLISH_SCRIPTS) {
     if (scripts[script]) {
       await npmRun(script, pkgDir)
     }
