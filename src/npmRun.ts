@@ -9,7 +9,10 @@ export default function npmPack (scriptName: string, cwd: string): Promise<strin
 
     proc.on('error', reject)
 
-    proc.on('close', (code: number) => {
+    proc.on('close', (code: number, signal: number | string | undefined) => {
+      if (signal) {
+        process.kill(process.pid, signal)
+      }
       if (code > 0) {
         return reject(new Error('Exit code ' + code))
       }

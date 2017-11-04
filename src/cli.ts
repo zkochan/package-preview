@@ -13,4 +13,7 @@ if (!what) {
 }
 
 previewPackage(what, where)
-  .catch(console.error.bind(console))
+  .catch((err: {code?: number }) => {
+    console.error(err)
+    process.exit(err.code || 1)
+  })

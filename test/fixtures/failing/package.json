@@ -1,0 +1,7 @@
+{
+  "name": "failing",
+  "version": "1.0.0",
+  "scripts": {
+    "prepublishOnly": "exit 1"
+  }
+}

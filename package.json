@@ -60,8 +60,10 @@
     "write-json-file": "^2.3.0"
   },
   "devDependencies": {
+    "@types/execa": "^0.7.2",
     "@types/tape": "^4.2.31",
     "@types/tempy": "^0.1.0",
+    "execa": "^0.8.0",
     "rimraf": "^2.6.2",
     "tape": "^4.8.0",
     "tempy": "^0.2.1",
