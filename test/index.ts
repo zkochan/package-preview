@@ -12,6 +12,15 @@ test('packagePreview()', async t => {
     .then(() => {
       t.ok(require(`${where}/node_modules/simple/findsProdDep`)())
       t.ok(require(`${where}/node_modules/simple/doesNotFindDevDep`)())
+      t.deepEqual(
+        require(`${where}/node_modules/simple/output.json`),
+        [
+          'prepublish',
+          'prepare',
+          'prepublishOnly',
+          'prepack',
+        ]
+      )
       t.end()
     })
     .catch(t.end)

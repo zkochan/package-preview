@@ -2,7 +2,7 @@ import spawn = require('cross-spawn')
 
 export default function npmPack (dependencyPath: string): Promise<string> {
   return new Promise((resolve, reject) => {
-    const proc = spawn('npm', ['pack'], {
+    const proc = spawn('npm', ['pack', '--ignore-scripts'], {
       cwd: dependencyPath,
     })
 

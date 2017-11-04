@@ -1,10 +1,22 @@
 {
   "name": "simple",
   "version": "1.0.0",
+  "files": [
+    "doesNotFindDevDep.js",
+    "findsProdDep.js",
+    "output.json"
+  ],
+  "scripts": {
+    "prepublish": "node -e \"process.stdout.write('prepublish')\" | json-append output.json",
+    "prepare": "node -e \"process.stdout.write('prepare')\" | json-append output.json",
+    "prepublishOnly": "node -e \"process.stdout.write('prepublishOnly')\" | json-append output.json",
+    "prepack": "node -e \"process.stdout.write('prepack')\" | json-append output.json"
+  },
   "dependencies": {
     "is-positive": "^1.0.0"
   },
   "devDependencies": {
-    "is-negative": "^1.0.0"
+    "is-negative": "^1.0.0",
+    "json-append": "^1.1.1"
   }
 }
