@@ -38,3 +38,21 @@ test('fails if prepublish scripts fail', async t => {
   }
   t.end()
 })
+
+test('install scripts are executed', async t => {
+  const what = path.join(fixturesDir, 'with-install-scripts')
+  const where = tempy.directory()
+  packagePreview(what, where)
+    .then(() => {
+      t.ok(require(`${where}/node_modules/with-install-scripts/createdByPreInstallScript.js`), 'preinstall script executed')
+      t.deepEqual(
+        require(`${where}/node_modules/with-install-scripts/output.json`),
+        [
+          'install',
+          'postinstall',
+        ]
+      )
+      t.end()
+    })
+    .catch(t.end)
+})

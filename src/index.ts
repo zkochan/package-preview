@@ -1,4 +1,5 @@
 import pnpmExec from '@pnpm/exec'
+import loadJsonFile = require('load-json-file')
 import path = require('path')
 import symlinkDir from 'symlink-dir'
 import writeJsonFile = require('write-json-file')
@@ -10,11 +11,11 @@ export default async function (what: string, where: string) {
   where = path.resolve(where)
 
   const previewDir = await getPreviewDir(where, path.basename(pkgDir))
-  const distDir = path.join(previewDir, 'package')
+  const pkg = require(path.join(pkgDir, 'package.json'))
+  const distDir = path.join(previewDir, pkg.name)
 
   await publishToDir(pkgDir, distDir)
 
-  const pkg = require(path.join(distDir, 'package.json'))
   const wrapperPkg = {
     dependencies: pkg.peerDependencies || {},
   }
