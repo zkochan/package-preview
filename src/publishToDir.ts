@@ -1,9 +1,11 @@
 import fx = require('fs-extra')
+import loadJsonFile = require('load-json-file')
 import fs = require('mz/fs')
 import path = require('path')
 import rimraf = require('rimraf-then')
 import unpackStream = require('unpack-stream')
 import npmPack from './npmPack'
+import npmRun from './npmRun'
 
 export default async function (pkgDir: string, distDir: string) {
   try {
@@ -13,6 +15,7 @@ export default async function (pkgDir: string, distDir: string) {
     if (err.code !== 'ENOENT') throw err
   }
 
+  await runPrepublishScripts(pkgDir)
   const tgzFilename = await npmPack(pkgDir)
   const tarball = path.resolve(pkgDir, tgzFilename)
   await fetchFromLocalTarball(tarball, distDir)
@@ -37,4 +40,23 @@ function clearDistDir (base: string) {
         .map(rimraf),
     )
   })
+}
+
+const PREPUBLISH_SCRIPTS = [
+  'prepublish',
+  'prepare',
+  'prepublishOnly',
+  'prepack',
+]
+
+async function runPrepublishScripts (pkgDir: string) {
+  const pkg = await loadJsonFile(path.join(pkgDir, 'package.json'))
+  if (!pkg.scripts) return
+  const scripts = pkg.scripts
+
+  for (const script in PREPUBLISH_SCRIPTS) {
+    if (scripts[script]) {
+      await npmRun(script, pkgDir)
+    }
+  }
 }

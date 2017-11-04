@@ -43,6 +43,7 @@
   "dependencies": {
     "@pnpm/exec": "^1.0.2",
     "@types/fs-extra": "^4.0.2",
+    "@types/load-json-file": "^2.0.7",
     "@types/mz": "^0.0.32",
     "@types/node": "^8.0.46",
     "@types/write-json-file": "^2.2.1",
@@ -50,6 +51,7 @@
     "find-down": "^0.1.4",
     "fs-extra": "^4.0.2",
     "graceful-fs": "^4.1.11",
+    "load-json-file": "^4.0.0",
     "mz": "^2.7.0",
     "rimraf-then": "^1.0.1",
     "symlink-dir": "^1.1.0",
