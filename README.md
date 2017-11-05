@@ -4,6 +4,7 @@
 
 [![npm version](https://img.shields.io/npm/v/package-preview.svg)](https://www.npmjs.com/package/package-preview)
 [![Status](https://travis-ci.org/zkochan/package-preview.svg?branch=master)](https://travis-ci.org/zkochan/package-preview "See test builds")
+[![Windows build status](https://ci.appveyor.com/api/projects/status/f7437jbcml04x750/branch/master?svg=true)](https://ci.appveyor.com/project/zkochan/package-preview/branch/master)
 
 How many times have you published version `1.0.0` of your new fancy package and it didn't work when you installed it as a dependency?
 This is because what you test locally is not what gets published to the npm registry.
