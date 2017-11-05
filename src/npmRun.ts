@@ -1,9 +1,14 @@
 import spawn = require('cross-spawn')
 
-export default function npmPack (scriptName: string, cwd: string): Promise<string> {
+export default function npmPack (
+  scriptName: string,
+  cwd: string,
+  env: object,
+): Promise<string> {
   return new Promise((resolve, reject) => {
     const proc = spawn('npm', ['run', scriptName], {
       cwd,
+      env,
       stdio: 'inherit',
     })
 

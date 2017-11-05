@@ -90,3 +90,13 @@ test('install scripts are executed', async t => {
     })
     .catch(t.end)
 })
+
+test('fails if another preview is run inside a preview', async t => {
+  const what = path.join(fixturesDir, 'loop')
+  const where = tempy.directory()
+  try {
+    await packagePreview(what, where)
+    t.fail('should have failed')
+  } catch (err) {}
+  t.end()
+})

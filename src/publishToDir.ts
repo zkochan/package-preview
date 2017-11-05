@@ -11,6 +11,7 @@ export default async function (
   pkgDir: string,
   distDir: string,
   opts: {
+    env: object,
     skipPrepack: boolean,
     skipPrepare: boolean,
     skipPrepublish: boolean,
@@ -61,6 +62,7 @@ const PREPUBLISH_SCRIPTS = [
 async function runPrepublishScripts (
   pkgDir: string,
   opts: {
+    env: object,
     skipPrepack: boolean,
     skipPrepare: boolean,
     skipPrepublish: boolean,
@@ -73,7 +75,7 @@ async function runPrepublishScripts (
 
   for (const script of PREPUBLISH_SCRIPTS) {
     if (scripts[script] && !opts[`skip${capitalize(script)}`]) {
-      await npmRun(script, pkgDir)
+      await npmRun(script, pkgDir, opts.env)
     }
   }
 }

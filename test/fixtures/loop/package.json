@@ -1,0 +1,8 @@
+{
+  "name": "loop",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "node ../../../node_modules/package-preview/lib/cli",
+    "prepublishOnly": "npm test"
+  }
+}
