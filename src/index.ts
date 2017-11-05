@@ -6,7 +6,25 @@ import writeJsonFile = require('write-json-file')
 import getPreviewDir from './getPreviewDir'
 import publishToDir from './publishToDir'
 
-export default async function (what: string, where: string) {
+const DEFAULT_OPTIONS = {
+  skipPrepack: false,
+  skipPrepare: false,
+  skipPrepublish: false,
+  skipPrepublishOnly: false,
+}
+
+export default async function (
+  what: string,
+  where: string,
+  maybeOpts?: {
+    skipPrepack?: boolean,
+    skipPrepare?: boolean,
+    skipPrepublish?: boolean,
+    skipPrepublishOnly?: boolean,
+  },
+) {
+  const opts = Object.assign({}, DEFAULT_OPTIONS, maybeOpts)
+
   const pkgDir = path.resolve(what)
   where = path.resolve(where)
 
@@ -14,7 +32,7 @@ export default async function (what: string, where: string) {
   const pkg = require(path.join(pkgDir, 'package.json'))
   const distDir = path.join(previewDir, pkg.name)
 
-  await publishToDir(pkgDir, distDir)
+  await publishToDir(pkgDir, distDir, opts)
 
   const wrapperPkg = {
     dependencies: pkg.peerDependencies || {},

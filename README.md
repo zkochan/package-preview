@@ -74,6 +74,49 @@ const awesome = require('awesome')
 assert(awesome() === 'Awesome stuff!')
 ```
 
+### Pro tips
+
+Frequently packages run their tests before publish:
+
+```json
+{
+  "scripts": {
+    "prepublishOnly": "npm test"
+  }
+}
+```
+
+However, if `package-preview` is executed before tests, it will result in an infinite loop:
+
+```
+publish -> prepublishOnly -> npm test -> package-preview -> publish
+```
+
+To avoid this loop, use `package-preview` with the `--skip-prepublishOnly` flag:
+
+```json
+{
+  "scripts": {
+    "test": "preview --skip-prepublishOnly && tape test.js",
+    "prepublishOnly": "npm test"
+  }
+}
+```
+
+There are similar flags for skipping other lifecycle events: `--skip-prepublish`, `--skip-prepare`, `--skip-prepack`.
+
+## CLI
+
+```
+  Usage: preview [what] [where] {OPTIONS}
+
+  Options:
+        --skip-prepublish  Skips running `prepublish` script before publishing preview
+           --skip-prepare  Skips running `prepare` script before publishing preview
+    --skip-prepublishOnly  Skips running `prepublishOnly` script before publishing preview
+           --skip-prepack  Skips running `prepack` script before publishing preview
+```
+
 ## License
 
 [MIT](LICENSE) © [Zoltan Kochan](https://www.kochan.io)

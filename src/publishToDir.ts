@@ -7,7 +7,16 @@ import unpackStream = require('unpack-stream')
 import npmPack from './npmPack'
 import npmRun from './npmRun'
 
-export default async function (pkgDir: string, distDir: string) {
+export default async function (
+  pkgDir: string,
+  distDir: string,
+  opts: {
+    skipPrepack: boolean,
+    skipPrepare: boolean,
+    skipPrepublish: boolean,
+    skipPrepublishOnly: boolean,
+  },
+) {
   try {
     await clearDistDir(distDir)
     await fx.copy(path.join(pkgDir, 'shrinkwrap.yaml'), path.join(distDir, 'shrinkwrap.yaml'))
@@ -15,7 +24,7 @@ export default async function (pkgDir: string, distDir: string) {
     if (err.code !== 'ENOENT') throw err
   }
 
-  await runPrepublishScripts(pkgDir)
+  await runPrepublishScripts(pkgDir, opts)
   const tgzFilename = await npmPack(pkgDir)
   const tarball = path.resolve(pkgDir, tgzFilename)
   await fetchFromLocalTarball(tarball, distDir)
@@ -49,14 +58,26 @@ const PREPUBLISH_SCRIPTS = [
   'prepack',
 ]
 
-async function runPrepublishScripts (pkgDir: string) {
+async function runPrepublishScripts (
+  pkgDir: string,
+  opts: {
+    skipPrepack: boolean,
+    skipPrepare: boolean,
+    skipPrepublish: boolean,
+    skipPrepublishOnly: boolean,
+  },
+) {
   const pkg = await loadJsonFile(path.join(pkgDir, 'package.json'))
   if (!pkg.scripts) return
   const scripts = pkg.scripts
 
   for (const script of PREPUBLISH_SCRIPTS) {
-    if (scripts[script]) {
+    if (scripts[script] && !opts[`skip${capitalize(script)}`]) {
       await npmRun(script, pkgDir)
     }
   }
+}
+
+function capitalize (str: string) {
+  return str[0].toUpperCase() + str.substr(1)
 }
