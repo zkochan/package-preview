@@ -1,5 +1,7 @@
 # package-preview
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/zkochan/package-preview.svg)](https://greenkeeper.io/)
+
 > Creates a production preview of a package
 
 [![npm version](https://img.shields.io/npm/v/package-preview.svg)](https://www.npmjs.com/package/package-preview)
