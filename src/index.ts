@@ -23,7 +23,7 @@ export default async function (
     skipPrepublishOnly?: boolean,
   },
 ) {
-  const opts = Object.assign({}, DEFAULT_OPTIONS, maybeOpts)
+  const opts = {...DEFAULT_OPTIONS, ...maybeOpts}
 
   const pkgDir = path.resolve(what)
   where = path.resolve(where)
@@ -42,7 +42,7 @@ export default async function (
   const pkg = require(path.join(pkgDir, 'package.json'))
   const distDir = path.join(previewDir, pkg.name)
 
-  await publishToDir(pkgDir, distDir, Object.assign({}, opts, {env: subenv}))
+  await publishToDir(pkgDir, distDir, {...opts, env: subenv})
 
   const wrapperPkg = {
     dependencies: pkg.peerDependencies || {},
