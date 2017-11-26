@@ -12,3 +12,8 @@ declare module 'find-down' {
   const anything: any;
   export = anything;
 }
+
+declare module 'meow' {
+  const anything: any;
+  export = anything;
+}

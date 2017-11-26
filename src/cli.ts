@@ -10,7 +10,26 @@ Options:
          --skip-prepare  Skips running \`prepare\` script before publishing preview
   --skip-prepublishOnly  Skips running \`prepublishOnly\` script before publishing preview
          --skip-prepack  Skips running \`prepack\` script before publishing preview
-`)
+`, {
+  flags: {
+    skipPrepack: {
+      default: false,
+      type: 'boolean',
+    },
+    skipPrepare: {
+      default: false,
+      type: 'boolean',
+    },
+    skipPrepublish: {
+      default: false,
+      type: 'boolean',
+    },
+    skipPrepublishOnly: {
+      default: false,
+      type: 'boolean',
+    },
+  },
+})
 
 let what = cli.input[0]
 let where = cli.input[1]

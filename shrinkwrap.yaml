@@ -2,7 +2,6 @@ dependencies:
   '@pnpm/exec': 1.1.2
   '@types/fs-extra': 4.0.5
   '@types/load-json-file': 2.0.7
-  '@types/meow': 3.6.2
   '@types/mz': 0.0.32
   '@types/node': 8.0.53
   '@types/write-json-file': 2.2.1
@@ -63,16 +62,6 @@ packages:
     dev: false
     resolution:
       integrity: sha512-NrH6jPlV77QCVPhAHofWeiOr77TgpKt82c2RVxSBChWBJqyY/u4ngl3CA4mcsAg/w7rNLrkR7dkObMV0ihLLXw==
-  /@types/meow/3.6.2:
-    dependencies:
-      '@types/minimist': 1.2.0
-    dev: false
-    resolution:
-      integrity: sha1-0Thn+X2LJYIA4U9Zxu0H8Is0KA4=
-  /@types/minimist/1.2.0:
-    dev: false
-    resolution:
-      integrity: sha1-aaI6OtKcrwCX8G7aWbNh7i8GOfY=
   /@types/mz/0.0.31:
     dependencies:
       '@types/node': 8.0.53
@@ -1575,7 +1564,6 @@ specifiers:
   '@types/execa': ^0.8.0
   '@types/fs-extra': ^4.0.2
   '@types/load-json-file': ^2.0.7
-  '@types/meow': ^3.6.2
   '@types/mz': ^0.0.32
   '@types/node': ^8.0.46
   '@types/tape': ^4.2.31
