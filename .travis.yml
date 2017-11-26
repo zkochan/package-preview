@@ -11,3 +11,5 @@ install:
   - pnpm i
 script:
   - npm t
+notifications:
+  email: false
