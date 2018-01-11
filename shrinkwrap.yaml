@@ -20,7 +20,7 @@ devDependencies:
   '@types/execa': 0.8.1
   '@types/tape': 4.2.31
   '@types/tempy': 0.1.0
-  execa: 0.8.0
+  execa: 0.9.0
   rimraf: 2.6.2
   tape: 4.8.0
   tempy: 0.2.1
@@ -442,7 +442,7 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha1-Cr9PHKpbyx96nYrMbepPqqBLrJs=
-  /execa/0.8.0:
+  /execa/0.9.0:
     dependencies:
       cross-spawn: 5.1.0
       get-stream: 3.0.0
@@ -455,7 +455,7 @@ packages:
     engines:
       node: '>=4'
     resolution:
-      integrity: sha1-2NdrvBtVIX7RkP1t1J08d07PyNo=
+      integrity: sha512-BbUMBiX4hqiHZUA5+JujIjNb6TyAlp2D5KLheMjMluwOuzcnylDL4AxZYLLn1n2AGB49eSWwyKvvEQoRpnAtmA==
   /find-down/0.1.4:
     dependencies:
       locate-path: 2.0.0
@@ -1634,7 +1634,7 @@ specifiers:
   '@types/tempy': ^0.1.0
   '@types/write-json-file': ^2.2.1
   cross-spawn: ^5.1.0
-  execa: ^0.8.0
+  execa: ^0.9.0
   find-down: ^0.1.4
   fs-extra: ^5.0.0
   graceful-fs: ^4.1.11
