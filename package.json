@@ -15,7 +15,7 @@
     "prepublishOnly": "npm run tsc",
     "tsc": "rimraf lib && tsc",
     "lint": "tslint -c tslint.json --project .",
-    "pretest": "npm install --ignore-scripts --prefix test/fixtures/simple --only dev",
+    "pretest": "pnpm install --ignore-scripts --prefix test/fixtures/simple --only dev",
     "test": "npm run lint && npm run tsc && node lib/cli && ts-node test --type-check"
   },
   "keywords": [
