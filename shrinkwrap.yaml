@@ -17,7 +17,7 @@ dependencies:
   unpack-stream: 3.0.1
   write-json-file: 2.3.0
 devDependencies:
-  '@types/execa': 0.8.1
+  '@types/execa': 0.9.0
   '@types/tape': 4.2.32
   '@types/tempy': 0.1.0
   execa: 0.10.0
@@ -31,7 +31,7 @@ packages:
   /@pnpm/exec/1.1.4:
     dependencies:
       '@pnpm/self-installer': 2.0.2
-      '@types/got': 7.1.7
+      '@types/got': 7.1.8
       '@types/node': 9.4.7
       command-exists: 1.2.2
       cross-spawn: 5.1.0
@@ -46,24 +46,24 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha1-hbuHZMfM0iOZn2FCGQBixibo8oc=
-  /@types/execa/0.8.1:
+  /@types/execa/0.9.0:
     dependencies:
       '@types/node': 9.4.7
     dev: true
     resolution:
-      integrity: sha512-7dsoPp7r33mdPcxukSrs9WVQgI96fiqffC7K4XvXJnSrTtJov3x1CJUgid7msJ8yCbfkmXJoKJ3HXyQIwZD0NQ==
+      integrity: sha512-mgfd93RhzjYBUHHV532turHC2j4l/qxsF/PbfDmprHDEUHmNZGlDn1CEsulGK3AfsPdhkWzZQT/S/k0UGhLGsA==
   /@types/fs-extra/5.0.1:
     dependencies:
       '@types/node': 9.4.7
     dev: false
     resolution:
       integrity: sha512-h3wnflb+jMTipvbbZnClgA2BexrT4w0GcfoCz5qyxd0IRsbqhLSyesM6mqZTAnhbVmhyTm5tuxfRu9R+8l+lGw==
-  /@types/got/7.1.7:
+  /@types/got/7.1.8:
     dependencies:
       '@types/node': 9.4.7
     dev: false
     resolution:
-      integrity: sha512-quhlNPGIkaRyO4PnEuP9pEkUPktjfrvPESENGOhiEzgOUNbunETSQXY5bkZY+Bb/J9V5p/f50Rh1eDklD4Z2FQ==
+      integrity: sha512-QxcSkx9PjHH7uqbzqKTKOAjGbayyo+dECnnqM3BBMC0WjYAqx0e6Qi9AFR4jluvx91e7qzgz4aGka7AhCTHYRw==
   /@types/load-json-file/2.0.7:
     dev: false
     resolution:
@@ -1026,12 +1026,12 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha1-ZYU1WEhh7JfXMNbPQYIuH1ZoQSg=
-  /source-map-support/0.5.3:
+  /source-map-support/0.5.4:
     dependencies:
       source-map: 0.6.1
     dev: true
     resolution:
-      integrity: sha512-eKkTgWYeBOQqFGXRfKabMFdnWepo51vWqEdoeikaEPFiJC7MCU5j2h4+6Q8npkZTeLGbSyecZvRxiSoWl3rh+w==
+      integrity: sha512-PETSPG6BjY1AHs2t64vS2aqAgu6dMIMXJULWFBGbh2Gr8nVLbCFDo6i/RMMvviIQ2h1Z8+5gQhVKSn2je9nmdg==
   /source-map/0.6.1:
     dev: true
     engines:
@@ -1234,7 +1234,7 @@ packages:
       make-error: 1.3.4
       minimist: 1.2.0
       mkdirp: 0.5.1
-      source-map-support: 0.5.3
+      source-map-support: 0.5.4
       yn: 2.0.0
     dev: true
     engines:
@@ -1372,7 +1372,7 @@ shrinkwrapMinorVersion: 4
 shrinkwrapVersion: 3
 specifiers:
   '@pnpm/exec': ^1.1.1
-  '@types/execa': ^0.8.0
+  '@types/execa': ^0.9.0
   '@types/fs-extra': ^5.0.0
   '@types/load-json-file': ^2.0.7
   '@types/mz': ^0.0.32
