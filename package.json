@@ -50,7 +50,7 @@
     "@types/write-json-file": "^2.2.1",
     "cross-spawn": "^6.0.0",
     "find-down": "^0.1.4",
-    "fs-extra": "^5.0.0",
+    "fs-extra": "^6.0.0",
     "graceful-fs": "^4.1.11",
     "load-json-file": "^4.0.0",
     "meow": "^4.0.0",
