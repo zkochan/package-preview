@@ -14,7 +14,7 @@ dependencies:
   mz: 2.7.0
   rimraf-then: 1.0.1
   symlink-dir: 1.1.3
-  unpack-stream: 3.0.3
+  unpack-stream: 4.0.0
   write-json-file: 2.3.0
 devDependencies:
   '@types/execa': 0.9.0
@@ -1076,12 +1076,10 @@ packages:
     dev: true
     resolution:
       integrity: sha1-BOaSb2YolTVPPdAVIDYzuFcpfiw=
-  /ssri/5.3.0:
-    dependencies:
-      safe-buffer: 5.1.2
+  /ssri/6.0.0:
     dev: false
     resolution:
-      integrity: sha512-XRSIPqLij52MtgoQavH/x/dU1qVKtWUAAZeOHsR9c2Ddi4XerFy3mc1alf+dLJKl9EUIm/Ht+EowFkTUOA6GAQ==
+      integrity: sha512-zYOGfVHPhxyzwi8MdtdNyxv3IynWCIM4jYReR48lqu0VngxgH1c+C6CmipRdJ55eVByTJV/gboFEEI7TEQI8DA==
   /stream-shift/1.0.0:
     dev: false
     resolution:
@@ -1325,17 +1323,17 @@ packages:
       node: '>= 4.0.0'
     resolution:
       integrity: sha512-rBJeI5CXAlmy1pV+617WB9J63U6XcazHHF2f2dbJix4XzpUF0RS3Zbj0FGIOCAva5P/d/GBOYaACQ1w+0azUkg==
-  /unpack-stream/3.0.3:
+  /unpack-stream/4.0.0:
     dependencies:
       '@types/node': 10.5.4
       decompress-maybe: 1.0.0
-      ssri: 5.3.0
+      ssri: 6.0.0
       tar-fs: 1.16.3
     dev: false
     engines:
-      node: '>=4'
+      node: '>=6'
     resolution:
-      integrity: sha512-h3Ii7ThTL7P5LlX1RuMPsuW4V5EZnLyjPwStIMQ4V0F6rblgmXIS+IkpAOu9THHDZYUO/D8TTJddVc6HIY4S5g==
+      integrity: sha512-c7fW8JV7WVb8BT0fZyuEXUi4SzqlJzCQFOytjjtFJH+ejDllZAzsIJjGjttWJR+0xqS/q2+TGvGm+GU5Jz/k4g==
   /util-deprecate/1.0.2:
     dev: false
     resolution:
@@ -1418,5 +1416,5 @@ specifiers:
   ts-node: ^6.0.0
   tslint: ^5.8.0
   typescript: ^3.0.0
-  unpack-stream: ^3.0.0
+  unpack-stream: ^4.0.0
   write-json-file: ^2.3.0
