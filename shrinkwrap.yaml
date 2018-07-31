@@ -7,7 +7,7 @@ dependencies:
   '@types/write-json-file': 2.2.1
   cross-spawn: 6.0.5
   find-down: 0.1.4
-  fs-extra: 5.0.0
+  fs-extra: 7.0.0
   graceful-fs: 4.1.11
   load-json-file: 4.0.0
   meow: 4.0.1
@@ -461,14 +461,16 @@ packages:
     dev: false
     resolution:
       integrity: sha512-y6OAwoSIf7FyjMIv94u+b5rdheZEjzR63GTyZJm5qh4Bi+2YgwLCcI/fPFZkL5PSixOt6ZNKm+w+Hfp/Bciwow==
-  /fs-extra/5.0.0:
+  /fs-extra/7.0.0:
     dependencies:
       graceful-fs: 4.1.11
       jsonfile: 4.0.0
       universalify: 0.1.2
     dev: false
+    engines:
+      node: '>=6 <7 || >=8'
     resolution:
-      integrity: sha512-66Pm4RYbjzdyeuqudYqhFiNBbCIuI9kgRqLPSHIlXHidW8NIQtVdkM1yeZ4lXwuhbTETv3EUGMNHAAw6hiundQ==
+      integrity: sha512-EglNDLRpmaTWiD/qraZn6HREAEAHJcJOmxNEYwq6xeMKnVMAy3GUcFB+wXt2C6k4CNvB/mP1y/U3dzvKKj5OtQ==
   /fs.realpath/1.0.0:
     resolution:
       integrity: sha1-FQStJSMVjKpA20onh8sBQRmU6k8=
@@ -1405,7 +1407,7 @@ specifiers:
   cross-spawn: ^6.0.0
   execa: ^0.10.0
   find-down: ^0.1.4
-  fs-extra: ^5.0.0
+  fs-extra: ^7.0.0
   graceful-fs: ^4.1.11
   load-json-file: ^4.0.0
   meow: ^4.0.0
