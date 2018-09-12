@@ -1,8 +1,6 @@
 import pnpmExec from '@pnpm/exec'
-import loadJsonFile = require('load-json-file')
 import path = require('path')
-import symlinkDir from 'symlink-dir'
-import writeJsonFile = require('write-json-file')
+import writeJsonFile from 'write-json-file'
 import getPreviewDir from './getPreviewDir'
 import publishToDir from './publishToDir'
 
