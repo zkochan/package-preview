@@ -1,5 +1,5 @@
 import fx = require('fs-extra')
-import loadJsonFile = require('load-json-file')
+import loadJsonFile from 'load-json-file'
 import fs = require('mz/fs')
 import path = require('path')
 import rimraf = require('rimraf-then')
@@ -69,7 +69,7 @@ async function runPrepublishScripts (
     skipPrepublishOnly: boolean,
   },
 ) {
-  const pkg = await loadJsonFile(path.join(pkgDir, 'package.json'))
+  const pkg = await loadJsonFile<{ scripts: {} }>(path.join(pkgDir, 'package.json'))
   if (!pkg.scripts) return
   const scripts = pkg.scripts
 

@@ -2,7 +2,7 @@ import execa = require('execa')
 import rimraf = require('rimraf-then')
 import path = require('path')
 import test = require('tape')
-import loadJsonFile = require('load-json-file')
+import loadJsonFile from 'load-json-file'
 import packagePreview from 'package-preview'
 import tempy = require('tempy')
 
