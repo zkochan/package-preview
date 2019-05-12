@@ -48,7 +48,7 @@
     "@types/node": "^10.0.8",
     "cross-spawn": "^6.0.0",
     "find-down": "^0.1.4",
-    "fs-extra": "^7.0.0",
+    "fs-extra": "^8.0.0",
     "graceful-fs": "^4.1.11",
     "load-json-file": "^5.0.0",
     "meow": "^5.0.0",
