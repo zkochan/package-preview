@@ -1,5 +1,5 @@
 import fx = require('fs-extra')
-import loadJsonFile from 'load-json-file'
+import loadJsonFile = require('load-json-file')
 import fs = require('mz/fs')
 import path = require('path')
 import rimraf = require('rimraf-then')
@@ -20,7 +20,7 @@ export default async function (
 ) {
   try {
     await clearDistDir(distDir)
-    await fx.copy(path.join(pkgDir, 'shrinkwrap.yaml'), path.join(distDir, 'shrinkwrap.yaml'))
+    await fx.copy(path.join(pkgDir, 'pnpm-lock.yaml'), path.join(distDir, 'pnpm-lock.yaml'))
   } catch (err) {
     if (err.code !== 'ENOENT') throw err
   }
@@ -38,18 +38,16 @@ async function fetchFromLocalTarball (tarball: string, dist: string) {
   })
 }
 
-const filesToKeep = new Set(['node_modules', 'shrinkwrap.yaml'])
+const filesToKeep = new Set(['node_modules', 'pnpm-lock.yaml'])
 
-function clearDistDir (base: string) {
-  return fs.readdir(base)
-  .then((dirs) => {
-    return Promise.all(
-      dirs
-        .filter((dir) => !filesToKeep.has(dir))
-        .map((dir) => path.join(base, dir))
-        .map(rimraf),
-    )
-  })
+async function clearDistDir (base: string) {
+  const dirs = await fs.readdir(base)
+  return Promise.all(
+    dirs
+      .filter((dir) => !filesToKeep.has(dir))
+      .map((dir) => path.join(base, dir))
+      .map(rimraf),
+  )
 }
 
 const PREPUBLISH_SCRIPTS = [

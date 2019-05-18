@@ -1,11 +1,10 @@
 language: node_js
 node_js:
-  - 6
   - 8
-  - 10
+  - 12
 sudo: false
 before_install:
-  - curl -L https://unpkg.com/@pnpm/self-installer | PNPM_VERSION=1.35.8 node # temp solution till v1.35.8 is latest
+  - curl -L https://unpkg.com/@pnpm/self-installer | PNPM_VERSION=next node # temp solution till v3.4.0 is latest
 install:
   - pnpm i
 script:

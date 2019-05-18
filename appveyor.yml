@@ -1,11 +1,11 @@
 environment:
   matrix:
-    - nodejs_version: 6
     - nodejs_version: 8
     - nodejs_version: 10
+    - nodejs_version: 12
 install:
   - ps: Install-Product node $env:nodejs_version
-  - set PNPM_VERSION=1.35.8 # temp solution till v1.35.8 is latest
+  - set PNPM_VERSION=next # temp solution till v3.4.0 is latest
   - curl -L https://unpkg.com/@pnpm/self-installer | node
   - pnpm install
 matrix:
