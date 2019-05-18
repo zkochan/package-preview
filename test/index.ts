@@ -1,3 +1,4 @@
+///<reference path="../typings/index.d.ts"/>
 import execa = require('execa')
 import rimraf = require('rimraf-then')
 import path = require('path')
