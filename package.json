@@ -43,7 +43,7 @@
   },
   "dependencies": {
     "@pnpm/exec": "^1.1.1",
-    "cross-spawn": "^6.0.0",
+    "cross-spawn": "^7.0.0",
     "find-down": "^0.1.4",
     "fs-extra": "^8.0.1",
     "graceful-fs": "^4.1.11",
