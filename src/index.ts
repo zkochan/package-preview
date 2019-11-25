@@ -1,6 +1,6 @@
 import pnpmExec from '@pnpm/exec'
 import path = require('path')
-import writeJsonFile from 'write-json-file'
+import writeJsonFile = require('write-json-file')
 import getPreviewDir from './getPreviewDir'
 import publishToDir from './publishToDir'
 

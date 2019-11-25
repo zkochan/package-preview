@@ -6,7 +6,7 @@ import test = require('tape')
 import loadJsonFile = require('load-json-file')
 import packagePreview from '../src'
 import tempy = require('tempy')
-import writeJsonFile from 'write-json-file'
+import writeJsonFile = require('write-json-file')
 
 const fixturesDir = path.join(__dirname, 'fixtures')
 
@@ -82,7 +82,7 @@ test('fails if prepublish scripts fail', async t => {
     await execa('node', [require.resolve('package-preview/lib/cli'), what, where])
     t.fail('should have failed')
   } catch (err) {
-    t.equal(err.code, 1)
+    t.ok(err)
   }
   t.end()
 })
