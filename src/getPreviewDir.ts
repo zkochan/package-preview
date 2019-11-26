@@ -8,7 +8,7 @@ export default async function (target: string, pkgName: string) {
   // node_modules or packages up in the directory tree.
   // Otherwise the package would have access to modules that are not declared
   // in its package.json
-  const filename = await findDown(['node_modules', 'package.json'], {cwd: target})
+  const filename = await findDown(['node_modules', 'package.json', 'pnpm-workspace.yaml'], {cwd: target})
   if (filename === null) {
     return path.join(path.dirname(target), PACKAGE_PREVIEWS_DIRNAME, pkgName)
   }
