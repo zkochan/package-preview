@@ -20,22 +20,38 @@ devDependencies:
   tape: 4.11.0
   tempy: 0.4.0
   ts-node: 8.5.4_typescript@3.7.3
-  tslint: 5.20.1_typescript@3.7.3
+  tslint: 6.1.0_typescript@3.7.3
   typescript: 3.7.3
 lockfileVersion: 5.1
 packages:
   /@babel/code-frame/7.5.5:
     dependencies:
       '@babel/highlight': 7.5.0
+    dev: false
     resolution:
       integrity: sha512-27d4lZoomVyo51VegxI20xZPuSHusqbQag/ztrBC7wegWoQ1nLREPVSKSW8byhTlzTKyNE4ifaTA6lCp7JjpFw==
+  /@babel/code-frame/7.8.3:
+    dependencies:
+      '@babel/highlight': 7.8.3
+    dev: true
+    resolution:
+      integrity: sha512-a9gxpmdXtZEInkCSHUJDLHZVBgb1QS0jhss4cPP93EW7s+uC5bikET2twEF3KV+7rDblJcmNvTR7VJejqd2C2g==
   /@babel/highlight/7.5.0:
     dependencies:
       chalk: 2.4.2
       esutils: 2.0.3
       js-tokens: 4.0.0
+    dev: false
     resolution:
       integrity: sha512-7dV4eu9gBxoM0dAnj/BCFDW9LFU0zvTrkq0ugM7pnHEgguOEeOz1so2ZghEdzviYzQEED0r4EAgpsBChKy1TRQ==
+  /@babel/highlight/7.8.3:
+    dependencies:
+      chalk: 2.4.2
+      esutils: 2.0.3
+      js-tokens: 4.0.0
+    dev: true
+    resolution:
+      integrity: sha512-PX4y5xQUvy0fnEVHrYOarRPXVWafSjTW9T0Hab8gVIawpl2Sj0ORyrygANq+KjcNlSSTw0YCLSNA8OyZ1I4yEg==
   /@pnpm/exec/1.1.5:
     dependencies:
       '@pnpm/self-installer': 2.0.10
@@ -306,6 +322,12 @@ packages:
       node: '>=0.3.1'
     resolution:
       integrity: sha512-s2+XdvhPCOF01LRQBC8hf4vhbVmI2CGS5aZnxLJlT5FtdhPCDFq80q++zK2KlrVorVDdL5BOGZ/VfLrVtYNF+Q==
+  /diff/4.0.2:
+    dev: true
+    engines:
+      node: '>=0.3.1'
+    resolution:
+      integrity: sha512-58lmxKSA4BNyLz+HHMUzlOEpg09FV+ev6ZMe3vJihgdxzgcwZ8VoEEPmALCZG9LmqfVoNMMKpttIYTVG6uDY7A==
   /duplexify/3.7.1:
     dependencies:
       end-of-stream: 1.4.4
@@ -1002,8 +1024,15 @@ packages:
   /resolve/1.13.1:
     dependencies:
       path-parse: 1.0.6
+    dev: false
     resolution:
       integrity: sha512-CxqObCX8K8YtAhOBRg+lrcdn+LK+WYOS8tSjqSFbjtrI5PnS63QPhZl4+yKfrU9tdsbMu9Anr/amegT87M9Z6w==
+  /resolve/1.15.1:
+    dependencies:
+      path-parse: 1.0.6
+    dev: true
+    resolution:
+      integrity: sha512-84oo6ZTtoTUpjgNEr5SJyzQhzL72gaRodsSfyxC/AXRvwu0Yse9H8eF9IpGo7b8YetZhlI6v7ZQ6bKBFV/6S7w==
   /resumer/0.0.0:
     dependencies:
       through: 2.3.8
@@ -1301,24 +1330,24 @@ packages:
       typescript: '>=2.0'
     resolution:
       integrity: sha512-izbVCRV68EasEPQ8MSIGBNK9dc/4sYJJKYA+IarMQct1RtEot6Xp0bXuClsbUSnKpg50ho+aOAx8en5c+y4OFw==
-  /tslib/1.10.0:
+  /tslib/1.11.1:
     dev: true
     resolution:
-      integrity: sha512-qOebF53frne81cf0S9B41ByenJ3/IuH8yJKngAX35CmiZySA0khhkovshKK+jGCaMnVomla7gVlIcc3EvKPbTQ==
-  /tslint/5.20.1_typescript@3.7.3:
+      integrity: sha512-aZW88SY8kQbU7gpV19lN24LtXh/yD4ZZg6qieAJDDg+YBsJcSmLGK9QpnUjAKVG/xefmvJGd1WUmfpT/g6AJGA==
+  /tslint/6.1.0_typescript@3.7.3:
     dependencies:
-      '@babel/code-frame': 7.5.5
+      '@babel/code-frame': 7.8.3
       builtin-modules: 1.1.1
       chalk: 2.4.2
       commander: 2.20.3
-      diff: 4.0.1
+      diff: 4.0.2
       glob: 7.1.6
       js-yaml: 3.13.1
       minimatch: 3.0.4
       mkdirp: 0.5.1
-      resolve: 1.13.1
+      resolve: 1.15.1
       semver: 5.7.1
-      tslib: 1.10.0
+      tslib: 1.11.1
       tsutils: 2.29.0_typescript@3.7.3
       typescript: 3.7.3
     dev: true
@@ -1328,10 +1357,10 @@ packages:
     peerDependencies:
       typescript: '>=2.3.0-dev || >=2.4.0-dev || >=2.5.0-dev || >=2.6.0-dev || >=2.7.0-dev || >=2.8.0-dev || >=2.9.0-dev || >=3.0.0-dev || >= 3.1.0-dev || >= 3.2.0-dev'
     resolution:
-      integrity: sha512-EcMxhzCFt8k+/UP5r8waCf/lzmeSyVlqxqMEDQE7rWYiQky8KpIBz1JAoYXfROHrPZ1XXd43q8yQnULOLiBRQg==
+      integrity: sha512-fXjYd/61vU6da04E505OZQGb2VCN2Mq3doeWcOIryuG+eqdmFUXTYVwdhnbEu2k46LNLgUYt9bI5icQze/j0bQ==
   /tsutils/2.29.0_typescript@3.7.3:
     dependencies:
-      tslib: 1.10.0
+      tslib: 1.11.1
       typescript: 3.7.3
     dev: true
     peerDependencies:
@@ -1490,7 +1519,7 @@ specifiers:
   tape: ^4.11.0
   tempy: ^0.4.0
   ts-node: ^8.5.2
-  tslint: ^5.20.1
+  tslint: ^6.0.0
   typescript: ^3.7.2
   unpack-stream: ^6.0.0
   write-json-file: ^4.2.1
