@@ -45,7 +45,7 @@
     "@pnpm/exec": "^1.1.5",
     "cross-spawn": "^7.0.1",
     "find-down": "^0.1.4",
-    "fs-extra": "^8.1.0",
+    "fs-extra": "^9.0.0",
     "graceful-fs": "^4.2.3",
     "load-json-file": "^6.2.0",
     "meow": "^6.0.0",
@@ -55,7 +55,7 @@
     "write-json-file": "^4.2.1"
   },
   "devDependencies": {
-    "@types/fs-extra": "^8.0.1",
+    "@types/fs-extra": "^9.0.0",
     "@types/mz": "^2.7.0",
     "@types/node": "^12.12.14",
     "@types/tape": "^4.2.33",

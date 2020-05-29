@@ -2,7 +2,7 @@ dependencies:
   '@pnpm/exec': 1.1.5
   cross-spawn: 7.0.1
   find-down: 0.1.4
-  fs-extra: 8.1.0
+  fs-extra: 9.0.0
   graceful-fs: 4.2.3
   load-json-file: 6.2.0
   meow: 6.0.0
@@ -11,7 +11,7 @@ dependencies:
   unpack-stream: 6.0.0
   write-json-file: 4.2.1
 devDependencies:
-  '@types/fs-extra': 8.0.1
+  '@types/fs-extra': 9.0.1
   '@types/mz': 2.7.0
   '@types/node': 12.12.14
   '@types/tape': 4.2.33
@@ -70,12 +70,12 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha512-AgE3bPlVZxD4kmt7sjTrDlkA8jdtPk4WwW6pJROrW1sK69W6s8kvILbq+urngz5ya73D+i3yuFVQVjTqSINzcQ==
-  /@types/fs-extra/8.0.1:
+  /@types/fs-extra/9.0.1:
     dependencies:
       '@types/node': 12.12.14
     dev: true
     resolution:
-      integrity: sha512-J00cVDALmi/hJOYsunyT52Hva5TnJeKP5yd1r+mH/ZU0mbYZflR0Z5kw5kITtKTRYMhm1JMClOFYdHnQszEvqw==
+      integrity: sha512-B42Sxuaz09MhC3DDeW5kubRcQ5by4iuVQ0cRRWM2lggLzAa/KVom0Aft/208NgMvNQQZ86s5rVcqDdn/SH0/mg==
   /@types/got/8.3.5:
     dependencies:
       '@types/node': 12.12.14
@@ -140,6 +140,12 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha1-iYUI2iIm84DfkEcoRWhJwVAaSw0=
+  /at-least-node/1.0.0:
+    dev: false
+    engines:
+      node: '>= 4.0.0'
+    resolution:
+      integrity: sha512-+q/t7Ekv1EDY2l6Gda6LLiX14rU9TV20Wa3ofeQmwPFZbOMo9DXrLbOjFaaclkXKWidIaopwAObQDqwWtGUjqg==
   /balanced-match/1.0.0:
     resolution:
       integrity: sha1-ibTRmasr7kneFk6gK4nORi1xt2c=
@@ -440,16 +446,17 @@ packages:
     dev: false
     resolution:
       integrity: sha512-y6OAwoSIf7FyjMIv94u+b5rdheZEjzR63GTyZJm5qh4Bi+2YgwLCcI/fPFZkL5PSixOt6ZNKm+w+Hfp/Bciwow==
-  /fs-extra/8.1.0:
+  /fs-extra/9.0.0:
     dependencies:
+      at-least-node: 1.0.0
       graceful-fs: 4.2.3
-      jsonfile: 4.0.0
-      universalify: 0.1.2
+      jsonfile: 6.0.1
+      universalify: 1.0.0
     dev: false
     engines:
-      node: '>=6 <7 || >=8'
+      node: '>=10'
     resolution:
-      integrity: sha512-yhlQgA6mnOJUKOsRUFsgJdQCvkKhcz8tlZG5HBQfReYZy46OwLcY+Zia0mtdHsOo9y/hP+CxMN0TU9QxoOtG4g==
+      integrity: sha512-pmEYSk3vYsG/bF651KPUXZ+hvjpgWYw/Gc7W9NFUe3ZVLczKKWIij3IKpOrQcdw4TILtibFslZ0UmR8Vvzig4g==
   /fs.realpath/1.0.0:
     resolution:
       integrity: sha1-FQStJSMVjKpA20onh8sBQRmU6k8=
@@ -643,12 +650,14 @@ packages:
     dev: false
     resolution:
       integrity: sha512-mrqyZKfX5EhL7hvqcV6WG1yYjnjeuYDzDhhcAAUrq8Po85NBQBJP+ZDUT75qZQ98IkUoBqdkExkukOU7Ts2wrw==
-  /jsonfile/4.0.0:
+  /jsonfile/6.0.1:
+    dependencies:
+      universalify: 1.0.0
     dev: false
     optionalDependencies:
       graceful-fs: 4.2.3
     resolution:
-      integrity: sha1-h3Gq4HmbZAdrdmQPygWPnBDjPss=
+      integrity: sha512-jR2b5v7d2vIOust+w3wtFKZIfpC2pnRmFAhAC/BuweZFQR8qZzxH1OyrQ10HmdVYiXWkYUqPVsz91cG7EL2FBg==
   /lines-and-columns/1.1.6:
     dev: false
     resolution:
@@ -1413,12 +1422,12 @@ packages:
       node: '>=8'
     resolution:
       integrity: sha512-uNaeirEPvpZWSgzwsPGtU2zVSTrn/8L5q/IexZmH0eH6SA73CmAA5U4GwORTxQAZs95TAXLNqeLoPPNO5gZfWg==
-  /universalify/0.1.2:
+  /universalify/1.0.0:
     dev: false
     engines:
-      node: '>= 4.0.0'
+      node: '>= 10.0.0'
     resolution:
-      integrity: sha512-rBJeI5CXAlmy1pV+617WB9J63U6XcazHHF2f2dbJix4XzpUF0RS3Zbj0FGIOCAva5P/d/GBOYaACQ1w+0azUkg==
+      integrity: sha512-rb6X1W158d7pRQBg5gkR8uPaSfiids68LTJQYOtEUhoJUWBdaQHsuT/EUduxXYxcrt4r5PJ4fuHW1MHT6p0qug==
   /unpack-stream/6.0.0:
     dependencies:
       '@types/ssri': 6.0.1
@@ -1502,14 +1511,14 @@ packages:
       integrity: sha512-Ux4ygGWsu2c7isFWe8Yu1YluJmqVhxqK2cLXNQA5AcC3QfbGNpM7fu0Y8b/z16pXLnFxZYvWhd3fhBY9DLmC6Q==
 specifiers:
   '@pnpm/exec': ^1.1.5
-  '@types/fs-extra': ^8.0.1
+  '@types/fs-extra': ^9.0.0
   '@types/mz': ^2.7.0
   '@types/node': ^12.12.14
   '@types/tape': ^4.2.33
   cross-spawn: ^7.0.1
   execa: ^4.0.0
   find-down: ^0.1.4
-  fs-extra: ^8.1.0
+  fs-extra: ^9.0.0
   graceful-fs: ^4.2.3
   load-json-file: ^6.2.0
   meow: ^6.0.0
