@@ -19,7 +19,7 @@ devDependencies:
   rimraf: 3.0.0
   tape: 4.11.0
   tempy: 0.4.0
-  ts-node: 8.5.4_typescript@3.7.3
+  ts-node: 9.0.0_typescript@3.7.3
   tslint: 6.1.0_typescript@3.7.3
   typescript: 3.7.3
 lockfileVersion: 5.1
@@ -316,12 +316,6 @@ packages:
       node: '>=8'
     resolution:
       integrity: sha512-oSyFlqaTHCItVRGK5RmrmjB+CmaMOW7IaNA/kdxqhoa6d17j/5ce9O9eWXmV/KEdRwqpQA+Vqe8a8Bsybu4YnA==
-  /diff/4.0.1:
-    dev: true
-    engines:
-      node: '>=0.3.1'
-    resolution:
-      integrity: sha512-s2+XdvhPCOF01LRQBC8hf4vhbVmI2CGS5aZnxLJlT5FtdhPCDFq80q++zK2KlrVorVDdL5BOGZ/VfLrVtYNF+Q==
   /diff/4.0.2:
     dev: true
     engines:
@@ -1114,13 +1108,13 @@ packages:
       node: '>=8'
     resolution:
       integrity: sha512-77XUKMiZN5LvQXZ9sgWfJza19AvYIDwaDGwGiULM+B5XYru8Z90Oh06JvqDlJczvjjYvssrV0aK1GI6+YXvn5A==
-  /source-map-support/0.5.16:
+  /source-map-support/0.5.19:
     dependencies:
       buffer-from: 1.1.1
       source-map: 0.6.1
     dev: true
     resolution:
-      integrity: sha512-efyLRJDr68D9hBBNIPWFjhpFzURh+KJykQwvMyW5UiZzYwoF6l4YMMDIJJEyFWxWCqfyxLzz6tSfUFR+kXXsVQ==
+      integrity: sha512-Wonm7zOCIJzBGQdB+thsPar0kYuCIzYvxZwlBa87yi/Mdjv7Tip2cyVbLj5o0cFPN4EVkuTwb3GDDyUx2DGnGw==
   /source-map/0.6.1:
     dev: true
     engines:
@@ -1314,22 +1308,22 @@ packages:
       node: '>=8'
     resolution:
       integrity: sha512-C4+gOpvmxaSMKuEf9Qc134F1ZuOHVXKRbtEflf4NTtuuJDEIJ9p5PXsalL8SkeRw+qit1Mo+yuvMPAKwWg/1hA==
-  /ts-node/8.5.4_typescript@3.7.3:
+  /ts-node/9.0.0_typescript@3.7.3:
     dependencies:
       arg: 4.1.2
-      diff: 4.0.1
+      diff: 4.0.2
       make-error: 1.3.5
-      source-map-support: 0.5.16
+      source-map-support: 0.5.19
       typescript: 3.7.3
       yn: 3.1.1
     dev: true
     engines:
-      node: '>=4.2.0'
+      node: '>=10.0.0'
     hasBin: true
     peerDependencies:
-      typescript: '>=2.0'
+      typescript: '>=2.7'
     resolution:
-      integrity: sha512-izbVCRV68EasEPQ8MSIGBNK9dc/4sYJJKYA+IarMQct1RtEot6Xp0bXuClsbUSnKpg50ho+aOAx8en5c+y4OFw==
+      integrity: sha512-/TqB4SnererCDR/vb4S/QvSZvzQMJN8daAslg7MeaiHvD8rDZsSfXmNeNumyZZzMned72Xoq/isQljYSt8Ynfg==
   /tslib/1.11.1:
     dev: true
     resolution:
@@ -1518,7 +1512,7 @@ specifiers:
   rimraf-then: ^1.0.1
   tape: ^4.11.0
   tempy: ^0.4.0
-  ts-node: ^8.5.2
+  ts-node: ^9.0.0
   tslint: ^6.0.0
   typescript: ^3.7.2
   unpack-stream: ^6.0.0
