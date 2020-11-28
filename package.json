@@ -42,7 +42,7 @@
     "url": "https://github.com/zkochan/package-preview/issues"
   },
   "dependencies": {
-    "@pnpm/exec": "^1.1.5",
+    "@pnpm/exec": "^2.0.0",
     "cross-spawn": "^7.0.1",
     "find-down": "^0.1.4",
     "fs-extra": "^8.1.0",
