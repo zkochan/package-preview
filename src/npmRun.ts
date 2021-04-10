@@ -4,8 +4,8 @@ export default function npmPack (
   scriptName: string,
   cwd: string,
   env: object,
-): Promise<string> {
-  return new Promise((resolve, reject) => {
+): Promise<void> {
+  return new Promise<void>((resolve, reject) => {
     const proc = spawn('npm', ['run', scriptName], {
       cwd,
       env,
