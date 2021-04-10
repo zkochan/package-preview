@@ -15,8 +15,8 @@
     "prepublishOnly": "npm run tsc",
     "tsc": "rimraf lib && tsc",
     "lint": "tslint -c tslint.json --project .",
-    "pretest": "pnpm install --ignore-scripts --prefix test/fixtures/simple --only dev",
-    "test": "npm run lint && npm run tsc && node lib/cli && ts-node test --type-check"
+    "pretest": "pnpm install --ignore-scripts -C test/fixtures/simple --only dev",
+    "test": "pnpm pretest && npm run lint && npm run tsc && node lib/cli && ts-node test --type-check"
   },
   "keywords": [
     "preview",
@@ -45,10 +45,10 @@
     "@pnpm/exec": "^3.0.0",
     "cross-spawn": "^7.0.1",
     "find-down": "^0.1.4",
-    "fs-extra": "^8.1.0",
+    "fs-extra": "^9.1.0",
     "graceful-fs": "^4.2.3",
     "load-json-file": "^6.2.0",
-    "meow": "^6.0.0",
+    "meow": "^9.0.0",
     "mz": "^2.7.0",
     "rimraf-then": "^1.0.1",
     "unpack-stream": "^6.0.0",
