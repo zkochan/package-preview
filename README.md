@@ -36,19 +36,13 @@ You can read more about pnpm's strictness and how it helps to avoid silly bugs i
 Install `package-preview`:
 
 ```bash
-npm install -D package-preview
+npm add -D package-preview
 # or
-pnpm install -D package-preview
+pnpm add -D package-preview
 ```
 
 `package-preview` uses [pnpm](https://github.com/pnpm/pnpm) for installing dependencies for the preview.
-If you don't have it installed, `package-preview` will install it on first run. Though you can also install manually if you want:
-
-```bash
-npm install -g pnpm
-# or
-curl -L https://unpkg.com/@pnpm/self-installer | node
-```
+If you don't have it installed, `package-preview` will use the pnpm which comes bundled with it. Though you can also install your own [pnpm version globally](https://pnpm.io/installation).
 
 ## Usage
 
