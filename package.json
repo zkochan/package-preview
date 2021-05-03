@@ -45,7 +45,7 @@
     "@pnpm/exec": "^3.0.0",
     "cross-spawn": "^7.0.3",
     "find-down": "^0.1.4",
-    "fs-extra": "^9.1.0",
+    "fs-extra": "^10.0.0",
     "graceful-fs": "^4.2.6",
     "load-json-file": "^6.2.0",
     "meow": "^9.0.0",

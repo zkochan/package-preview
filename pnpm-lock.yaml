@@ -9,7 +9,7 @@ specifiers:
   cross-spawn: ^7.0.3
   execa: ^5.0.0
   find-down: ^0.1.4
-  fs-extra: ^9.1.0
+  fs-extra: ^10.0.0
   graceful-fs: ^4.2.6
   load-json-file: ^6.2.0
   meow: ^9.0.0
@@ -28,7 +28,7 @@ dependencies:
   '@pnpm/exec': 3.0.0
   cross-spawn: 7.0.3
   find-down: 0.1.4
-  fs-extra: 9.1.0
+  fs-extra: 10.0.0
   graceful-fs: 4.2.6
   load-json-file: 6.2.0
   meow: 9.0.0
@@ -172,11 +172,6 @@ packages:
   /arrify/1.0.1:
     resolution: {integrity: sha1-iYUI2iIm84DfkEcoRWhJwVAaSw0=}
     engines: {node: '>=0.10.0'}
-    dev: false
-
-  /at-least-node/1.0.0:
-    resolution: {integrity: sha512-+q/t7Ekv1EDY2l6Gda6LLiX14rU9TV20Wa3ofeQmwPFZbOMo9DXrLbOjFaaclkXKWidIaopwAObQDqwWtGUjqg==}
-    engines: {node: '>= 4.0.0'}
     dev: false
 
   /balanced-match/1.0.2:
@@ -530,11 +525,10 @@ packages:
     resolution: {integrity: sha512-y6OAwoSIf7FyjMIv94u+b5rdheZEjzR63GTyZJm5qh4Bi+2YgwLCcI/fPFZkL5PSixOt6ZNKm+w+Hfp/Bciwow==}
     dev: false
 
-  /fs-extra/9.1.0:
-    resolution: {integrity: sha512-hcg3ZmepS30/7BSFqRvoo3DOMQu7IjqxO5nCDt+zM9XWjb33Wg7ziNT+Qvqbuc3+gWpzO02JubVyk2G4Zvo1OQ==}
-    engines: {node: '>=10'}
+  /fs-extra/10.0.0:
+    resolution: {integrity: sha512-C5owb14u9eJwizKGdchcDUQeFtlSHHthBk8pbX9Vc1PFZrLombudjDnNns88aYslCyF6IY5SUw3Roz6xShcEIQ==}
+    engines: {node: '>=12'}
     dependencies:
-      at-least-node: 1.0.0
       graceful-fs: 4.2.6
       jsonfile: 6.1.0
       universalify: 2.0.0
