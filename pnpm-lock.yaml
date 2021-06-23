@@ -4,7 +4,7 @@ specifiers:
   '@pnpm/exec': ^3.0.0
   '@types/fs-extra': ^9.0.10
   '@types/mz': ^2.7.3
-  '@types/node': 14.14.0
+  '@types/node': 14.17.4
   '@types/tape': ^4.13.0
   cross-spawn: ^7.0.3
   execa: ^5.0.0
@@ -40,7 +40,7 @@ dependencies:
 devDependencies:
   '@types/fs-extra': 9.0.10
   '@types/mz': 2.7.3
-  '@types/node': 14.14.0
+  '@types/node': 14.17.4
   '@types/tape': 4.13.0
   execa: 5.0.0
   rimraf: 3.0.2
@@ -113,12 +113,12 @@ packages:
       '@types/node': 14.14.37
     dev: true
 
-  /@types/node/14.14.0:
-    resolution: {integrity: sha512-BfbIHP9IapdupGhq/hc+jT5dyiBVZ2DdeC5WwJWQWDb0GijQlzUFAeIQn/2GtvZcd2HVUU7An8felIICFTC2qg==}
-    dev: true
-
   /@types/node/14.14.37:
     resolution: {integrity: sha512-XYmBiy+ohOR4Lh5jE379fV2IU+6Jn4g5qASinhitfyO71b/sCo6MKsMLF5tc7Zf2CE8hViVQyYSobJNke8OvUw==}
+
+  /@types/node/14.17.4:
+    resolution: {integrity: sha512-8kQ3+wKGRNN0ghtEn7EGps/B8CzuBz1nXZEIGGLP2GnwbqYn4dbTs7k+VKLTq1HvZLRCIDtN3Snx1Ege8B7L5A==}
+    dev: true
 
   /@types/normalize-package-data/2.4.0:
     resolution: {integrity: sha512-f5j5b/Gf71L+dbqxIpQ4Z2WlmI/mPJ0fOkGGmFgtb6sAu97EPczzbS3/tJKxmcYDj55OX6ssqwDAWOHIYDRDGA==}
