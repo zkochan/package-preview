@@ -52,7 +52,7 @@
     "mz": "^2.7.0",
     "rimraf-then": "^1.0.1",
     "unpack-stream": "^6.0.0",
-    "write-json-file": "^4.3.0"
+    "write-json-file": "^5.0.0"
   },
   "devDependencies": {
     "@types/fs-extra": "^9.0.10",
