@@ -59,7 +59,7 @@
     "@types/mz": "^2.7.3",
     "@types/node": "14.14.0",
     "@types/tape": "^4.13.0",
-    "execa": "^5.0.0",
+    "execa": "^8.0.0",
     "rimraf": "^3.0.2",
     "tape": "4",
     "tempy": "^1.0.1",
