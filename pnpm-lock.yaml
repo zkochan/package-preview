@@ -4,7 +4,7 @@ specifiers:
   '@pnpm/exec': ^3.0.0
   '@types/fs-extra': ^9.0.10
   '@types/mz': ^2.7.3
-  '@types/node': 14.14.0
+  '@types/node': 14.18.63
   '@types/tape': ^4.13.0
   cross-spawn: ^7.0.3
   execa: ^5.0.0
@@ -40,7 +40,7 @@ dependencies:
 devDependencies:
   '@types/fs-extra': 9.0.10
   '@types/mz': 2.7.3
-  '@types/node': 14.14.0
+  '@types/node': 14.18.63
   '@types/tape': 4.13.0
   execa: 5.0.0
   rimraf: 3.0.2
@@ -100,7 +100,7 @@ packages:
   /@types/fs-extra/9.0.10:
     resolution: {integrity: sha512-O9T2LLkRDiTlalOBdjEkcnT0MRdT2+wglCl7pJUJ3mkWkR8hX4K+5bg2raQNJcLv4V8zGuTXe7Ud3wSqkTyuyQ==}
     dependencies:
-      '@types/node': 14.14.37
+      '@types/node': 14.18.63
     dev: true
 
   /@types/minimist/1.2.1:
@@ -110,15 +110,11 @@ packages:
   /@types/mz/2.7.3:
     resolution: {integrity: sha512-Zp1NUJ4Alh3gaun0a5rkF3DL7b2j1WB6rPPI5h+CJ98sQnxe9qwskClvupz/4bqChGR3L/BRhTjlaOwR+uiZJg==}
     dependencies:
-      '@types/node': 14.14.37
+      '@types/node': 14.18.63
     dev: true
 
-  /@types/node/14.14.0:
-    resolution: {integrity: sha512-BfbIHP9IapdupGhq/hc+jT5dyiBVZ2DdeC5WwJWQWDb0GijQlzUFAeIQn/2GtvZcd2HVUU7An8felIICFTC2qg==}
-    dev: true
-
-  /@types/node/14.14.37:
-    resolution: {integrity: sha512-XYmBiy+ohOR4Lh5jE379fV2IU+6Jn4g5qASinhitfyO71b/sCo6MKsMLF5tc7Zf2CE8hViVQyYSobJNke8OvUw==}
+  /@types/node/14.18.63:
+    resolution: {integrity: sha512-fAtCfv4jJg+ExtXhvCkCqUKZ+4ok/JQk01qDKhL5BDDoS3AxKXhV5/MAVUZyQnSEd2GT92fkgZl0pz0Q0AzcIQ==}
 
   /@types/normalize-package-data/2.4.0:
     resolution: {integrity: sha512-f5j5b/Gf71L+dbqxIpQ4Z2WlmI/mPJ0fOkGGmFgtb6sAu97EPczzbS3/tJKxmcYDj55OX6ssqwDAWOHIYDRDGA==}
@@ -127,13 +123,13 @@ packages:
   /@types/ssri/6.0.3:
     resolution: {integrity: sha512-mYh0G0jytNFBi/tT91pg7wKtcaoy5G07YBDkR4Sq9Z+2fX1ZJgRGNKDnaRWQQuNDo9r9wJ22J6oqnElZmV+qLQ==}
     dependencies:
-      '@types/node': 14.14.37
+      '@types/node': 14.18.63
     dev: false
 
   /@types/tape/4.13.0:
     resolution: {integrity: sha512-0V8cKowBdsiA9nbxAg7531sF2cdPZNiUogcfIUeUGm+bejUBE/bvibz3rH36iQP9bQjO/sOzFwU97/uC5mCyoA==}
     dependencies:
-      '@types/node': 14.14.37
+      '@types/node': 14.18.63
     dev: true
 
   /aggregate-error/3.1.0:
